@@ -1,7 +1,7 @@
 import br.com.alura.alugames.modelo.Gamer
 
 fun main() {
-    val gamer1 = Gamer("   ", "elizeu.santos.dev@email.com")
+    val gamer1 = Gamer("Elizeu Santos", "elizeu.santos.dev@hotmail.com")
     println(gamer1)
 
     val gamer2 = Gamer(
