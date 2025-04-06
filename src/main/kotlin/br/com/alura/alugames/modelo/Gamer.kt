@@ -43,6 +43,7 @@ data class Gamer(var nome:String, var email:String) {
 
     fun validarEmail(): String {
         val regex = Regex("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$")
+
         if (regex.matches(email)) {
             return email
         } else {
@@ -55,14 +56,17 @@ data class Gamer(var nome:String, var email:String) {
         fun criarGamer(leitura: Scanner): Gamer {
             println("Boas vindas ao AluGames! Vamos fazer seu cadastro. Digite seu nome:")
             val nome = leitura.nextLine()
+
             println("Digite seu e-mail:")
             val email = leitura.nextLine()
+
             println("Deseja completar seu cadastro com usuário e data de nascimento? (S/N)")
             val opcao = leitura.nextLine()
 
             if (opcao.equals("s", true)) {
                 println("Digite sua data de nascimento(DD/MM/AAAA):")
                 val nascimento = leitura.nextLine()
+
                 println("Digite seu nome de usuário:")
                 val usuario = leitura.nextLine()
 
@@ -70,8 +74,6 @@ data class Gamer(var nome:String, var email:String) {
             } else {
                 return Gamer (nome, email)
             }
-
         }
     }
-
 }
